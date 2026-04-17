@@ -204,28 +204,71 @@ footer {
 
 @media (max-width: 768px) {
 
+    /* HEADER */
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* HERO */
     .hero-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .sobre-content {
-        flex-direction: column;
-        text-align: center;
+    .hero-text h1 {
+        font-size: 30px;
     }
 
-    .hero-text h1 {
-        font-size: 32px;
+    /* IMAGENS CENTRALIZADAS */
+    .hero-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
     }
 
     .img-main {
         width: 250px;
     }
 
-    nav ul {
+    .img-small {
+        display: none; /* REMOVE AS PEQUENAS NO MOBILE (fica MUITO melhor) */
+    }
+
+    /* SOBRE */
+    .sobre-content {
         flex-direction: column;
+        text-align: center;
+    }
+
+    /* TITULOS (ESPAÇO MELHOR) */
+    .titulo {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+
+    /* CARDS */
+    .cards {
         gap: 15px;
     }
+
+    .card {
+        padding: 15px;
+    }
+
+    /* ESPAÇAMENTO GERAL */
+    section {
+        padding: 60px 0;
+    }
+
 }
 
 @media (max-width: 1024px) {
