@@ -51,6 +51,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #333;
+    font-size: 14px;
 }
 
 /* HERO */
@@ -212,8 +213,10 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap; /* quebra linha se não couber */
+        justify-content: center;
+        gap: 15px;
         margin-top: 10px;
     }
 
