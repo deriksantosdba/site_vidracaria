@@ -46,9 +46,9 @@ header {
 }
 
 .logo .nome {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
-    color: #222;
+    color: #011D73;
 }
 /* ============================================ */
 
@@ -86,13 +86,15 @@ nav a {
 
 .btn {
     font-size: 16px;
-    background: #1e2bb8;
+    background: #011D73;
     color: #fff;
     padding: 12px 20px;
     border-radius: 10px;
     cursor: pointer;
     border: none;
     transition: 0.3s;
+    text-decoration: none; /* remove o sublinhado */
+    display: inline-block; /* garante comportamento de botão */
 }
 
 .btn:hover {
@@ -178,6 +180,11 @@ section {
 /* CONTATO */
 .contato-content {
     text-align: center;
+}
+.contato a {
+    text-decoration: none;
+    color: #011D73;
+    font-weight: 600;
 }
 
 /* FOOTER */
@@ -290,4 +297,19 @@ footer {
     .img-main {
         width: 280px;
     }
+}
+#whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: #fff;
+    font-size: 24px;
+    padding: 14px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+#whatsapp i {
+    display: block;
 }
