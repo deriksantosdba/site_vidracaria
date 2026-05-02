@@ -1,3 +1,8 @@
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
 /* RESET */
 * {
     margin: 0;
@@ -33,7 +38,7 @@ header {
     align-items: center;
 }
 
-/* ===== AJUSTE LOGO (ÚNICA ALTERAÇÃO REAL) ===== */
+/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -50,8 +55,8 @@ header {
     font-weight: 600;
     color: #011D73;
 }
-/* ============================================ */
 
+/* MENU */
 nav ul {
     display: flex;
     list-style: none;
@@ -60,8 +65,43 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
-    font-size: 14px;
+    color: #000000;
+    font-size: 16px;
+    margin-top: 30px;
+
+    position: relative;
+    padding: 5px 2px;
+    transition: 0.3s;
+}
+
+/* LINHA ANIMADA */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #011D73;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    color: #011D73;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* LINK ATIVO */
+nav a.ativo {
+    color: #011D73;
+}
+
+nav a.ativo::after {
+    width: 100%;
 }
 
 /* HERO */
@@ -93,8 +133,8 @@ nav a {
     cursor: pointer;
     border: none;
     transition: 0.3s;
-    text-decoration: none; /* remove o sublinhado */
-    display: inline-block; /* garante comportamento de botão */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -144,6 +184,8 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+
+    overflow: visible; /* CORREÇÃO */
 }
 
 .card {
@@ -152,10 +194,14 @@ section {
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
+
+    position: relative; /* CORREÇÃO */
+    z-index: 1;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 /* GALERIA */
@@ -170,6 +216,7 @@ section {
     height: 200px;
     object-fit: cover;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 .galeria img:hover {
@@ -181,6 +228,7 @@ section {
 .contato-content {
     text-align: center;
 }
+
 .contato a {
     text-decoration: none;
     color: #011D73;
@@ -207,19 +255,7 @@ footer {
     transform: translateY(0);
 }
 
-/* WHATSAPP */
-#whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25D366;
-    color: #fff;
-    font-size: 22px;
-    padding: 12px 14px;
-    border-radius: 50%;
-    text-decoration: none;
-}
-
+/* RESPONSIVO */
 @media (max-width: 768px) {
 
     .nav {
@@ -266,7 +302,7 @@ footer {
     }
 
     .titulo {
-        margin-bottom: 25px;
+        margin-bottom: 35px;
         font-size: 24px;
     }
 
@@ -298,6 +334,8 @@ footer {
         width: 280px;
     }
 }
+
+/* WHATSAPP */
 #whatsapp {
     position: fixed;
     bottom: 30px;
@@ -312,4 +350,82 @@ footer {
 
 #whatsapp i {
     display: block;
+}
+/* LIGHTBOX GALERIA */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+#fechar {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.galeria img {
+    cursor: pointer;
+}
+.sobre-img img {
+    
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.hero-text h4 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #000000;
+}
+.hero-text h1 {
+    color: #011D73;
+}
+.sobre-text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #011D73;
+    margin-bottom: 15px;
+}
+.titulo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #011D73;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.card i {
+    font-size: 30px;
+    color: #011D73;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+}
+.card i {
+    margin-right: 8px;
+}
+.hero-text p {
+    font-size: 18px;
+}
+
+.sobre-text p {
+    font-size: 18px;
 }
