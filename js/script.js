@@ -56,5 +56,42 @@ document.addEventListener("DOMContentLoaded", () => {
             lightbox.style.display = "none";
         }
     });
+    /* MENU MOBILE */
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+    menuToggle.addEventListener("click", () => {
+         nav.classList.toggle("ativo");
+    });
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+       link.addEventListener("click", () => {
+         nav.classList.remove("ativo");
+        });
+    });
+    /* LISTA DE ALUNOS FOOTER */
+    const btnAlunos = document.getElementById("btnAlunos");
+    const listaAlunos = document.getElementById("listaAlunos");
+
+    btnAlunos.addEventListener("click", () => {
+       listaAlunos.classList.toggle("ativo");
+      btnAlunos.classList.toggle("ativo");
+    });
+    /* LOADING SCREEN */
+    window.addEventListener("load", () => {
+
+        const loading = document.getElementById("loading");
+
+        setTimeout(() => {
+            loading.style.opacity = "0";
+
+            setTimeout(() => {
+                loading.style.display = "none";
+            }, 600);
+
+        }, 1800);
+
+    });
 
 });
