@@ -377,10 +377,12 @@ section {
 }
 
 .depoimentos .card i {
-    color: #FFD43B;
+    color: #b58e00;
     font-size: 28px;
     margin-bottom: 15px;
 }
+
+
 
 .depoimentos .card p {
     font-size: 16px;
@@ -399,6 +401,7 @@ section {
 
 .contato-content {
     text-align: center;
+    font-size: 18px;
 }
 
 .contato a {
