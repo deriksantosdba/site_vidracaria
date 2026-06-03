@@ -731,7 +731,11 @@ footer {
     }
 
     .hero-text h1 {
-        font-size: 30px;
+        font-size: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
     }
 
     .hero-img {
