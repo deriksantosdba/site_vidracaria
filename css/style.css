@@ -673,6 +673,15 @@ footer {
     .img-main {
         width: 280px;
     }
+
+    
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
 }
 
 /* ============================= */
